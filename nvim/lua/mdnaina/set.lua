@@ -42,3 +42,16 @@ vim.opt.colorcolumn = "80"
 
 vim.g.mapleader = " "
 
+
+-- Color Theme
+vim.o.background="dark";
+vim.o.termguicolors = true
+vim.cmd([[colorscheme gruvbox]]);
+
+vim.api.nvim_command([[
+    augroup ChangeBackgroudColour
+        autocmd colorscheme * :hi normal guibg=#0a0a0a
+    augroup END
+]])
+
+
